@@ -1,4 +1,4 @@
-/* FrostLogic landing v4 — bigger logo, top-right nav, smooth scroll */
+/* FrostLogic landing v5 — bigger logo, no wordmark, nav contact mailto */
 :root{
   --bg:#070a12; --panel:#0c1220; --ink:#e7eef8; --muted:#9fb0c9; --accent:#21b0ff; --line:#1a2333;
 }
@@ -8,17 +8,17 @@ html{scroll-behavior:smooth}
 .container{max-width:1100px;margin:0 auto;padding:0 20px}
 /* Header */
 .site-header{position:sticky;top:0;backdrop-filter:saturate(160%) blur(6px);background:rgba(7,10,18,.55);border-bottom:1px solid var(--line);z-index:20}
-.nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.nav{display:flex;align-items:center;justify-content:space-between;height:98px}
 .brand{display:flex;gap:14px;align-items:center;text-decoration:none;color:var(--ink)}
-.logo{height:52px;width:auto;display:block;filter:drop-shadow(0 0 14px rgba(33,176,255,.45))}
-.name{font-weight:800;letter-spacing:.3px}
+/* High-specificity logo size (overrides any old rules) */
+.site-header .nav .brand > img.logo{height:88px;width:auto;display:block;filter:drop-shadow(0 0 14px rgba(33,176,255,.45))}
 .topnav{display:flex;align-items:center;gap:18px}
 .topnav a{color:var(--muted);text-decoration:none;font-weight:600}
 .topnav a:hover{color:var(--ink)}
 .badge{font-size:12px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
 
 /* Hero */
-.hero{padding:86px 0 44px;border-bottom:1px solid var(--line);background:radial-gradient(1100px 500px at 70% -10%, rgba(33,176,255,.12), transparent)}
+.hero{padding:92px 0 48px;border-bottom:1px solid var(--line);background:radial-gradient(1100px 500px at 70% -10%, rgba(33,176,255,.12), transparent)}
 .hero-inner h1{font-size:40px;line-height:1.2;margin:0 0 10px}
 .hero-inner .sub{color:var(--muted);margin:0 0 16px}
 .punch{list-style:disc;margin:0 0 20px 20px;color:var(--ink)}
@@ -47,21 +47,14 @@ html{scroll-behavior:smooth}
 
 /* Responsive */
 @media (max-width:860px){
+  .nav{height:86px}
+  .site-header .nav .brand > img.logo{height:68px}
   .grid-2,.grid-3{grid-template-columns:1fr}
   .cta-inner{flex-direction:column;gap:12px;text-align:center}
   .hero-inner h1{font-size:30px}
-  .logo{height:44px}
   .topnav{gap:12px}
+}
 
- /* === Brand tweaks: hide text wordmark + bigger logo === */
-.name{ display:none !important; }              /* remove "FrostLogic" text */
-.logo{ height:80px !important; }               /* bigger logo on desktop */
-.nav{ height:92px !important; }                /* give header a bit more room */
-@media (max-width:860px){
-  .logo{ height:56px !important; }             /* big but sane on mobile */
-  .nav{ height:80px !important; }
-
-  /* Patents list polish */
+/* Patents styling */
 .patents li{margin:10px 0 14px;line-height:1.35}
-.patents code{background:#0c1220;border:1px solid #1a2333;border-radius:6px;padding:2px 6px}
-
+.patents code{background:#0c1220;border:1px solid var(--line);border-radius:6px;padding:2px 6px}
