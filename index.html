@@ -12,14 +12,21 @@
 <body>
   <header class="site-header">
     <div class="container nav">
-      <div class="brand">
+      <a class="brand" href="#top" aria-label="FrostLogic home">
         <img src="assets/logo.png" alt="FrostLogic logo" class="logo">
         <div class="name">FrostLogic</div>
-      </div>
-      <div class="badge">Patent Pending</div>
+      </a>
+      <nav class="topnav">
+        <a href="#problem">Problem</a>
+        <a href="#solution">Solution</a>
+        <a href="#patents">Patents</a>
+        <a href="#contact" class="btn btn-outline">Contact</a>
+        <span class="badge">Patent Pending</span>
+      </nav>
     </div>
   </header>
 
+  <main id="top">
   <section class="hero">
     <div class="container hero-inner">
       <h1>Compliance Infrastructure for Enterprise Retail</h1>
@@ -34,6 +41,23 @@
         <a class="btn btn-ghost" href="FrostLogic_Patent_ROI_Snapshot_v2.pdf" target="_blank" rel="noopener">View 1‑Pager</a>
       </div>
       <div class="stamp">TradeCore Technologies • Inventor‑led • 24 yrs field experience</div>
+    </div>
+  </section>
+
+  <section id="problem" class="section">
+    <div class="container grid-2">
+      <div>
+        <h2>The Problem</h2>
+        <p>Retailers face stricter refrigerant rules (EPA AIM Act) and expanding climate disclosure requirements (especially CA/WA). Manual logs and legacy tools create compliance gaps, fines, and reputational risk across thousands of stores and contractors.</p>
+      </div>
+      <div class="card">
+        <h3>What breaks in the field</h3>
+        <ul>
+          <li>Fragmented contractor documentation</li>
+          <li>Delayed/dirty data into ERP systems</li>
+          <li>Weak audit trails for regulators & ESG</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -54,6 +78,20 @@
     </div>
   </section>
 
+  <section id="patents" class="section">
+    <div class="container">
+      <h2>Patent Portfolio (6 Pending)</h2>
+      <ul class="patents">
+        <li>FrostDynamics — ERP Integration & Compliance Data Sync (Utility, Aug 2025)</li>
+        <li>Immutable Compliance Management Systems</li>
+        <li>Contractor Scoring & Federated Integration</li>
+        <li>Real‑Time AI Field Technician Assistant</li>
+        <li>Adaptive Apprenticeship Training Feedback System</li>
+        <li>Cryptographic Store Stamp, Dispatch Scoring & Inventory Reorder</li>
+      </ul>
+    </div>
+  </section>
+
   <section id="contact" class="cta-strip">
     <div class="container cta-inner">
       <div>
@@ -65,6 +103,7 @@
       </div>
     </div>
   </section>
+  </main>
 
   <footer class="footer">
     <div class="container foot">
@@ -78,7 +117,18 @@
   </footer>
 
 <script>
+  // Current year
   document.getElementById('year').textContent = new Date().getFullYear();
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (href.length > 1 && document.querySelector(href)) {
+        e.preventDefault();
+        document.querySelector(href).scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    });
+  });
 </script>
 </body>
 </html>
