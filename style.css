@@ -61,4 +61,7 @@ html{scroll-behavior:smooth}
   .logo{ height:56px !important; }             /* big but sane on mobile */
   .nav{ height:80px !important; }
 
+  /* Patents list polish */
+.patents li{margin:10px 0 14px;line-height:1.35}
+.patents code{background:#0c1220;border:1px solid #1a2333;border-radius:6px;padding:2px 6px}
 
