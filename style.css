@@ -55,7 +55,7 @@ html{scroll-behavior:smooth}
 
  /* === Brand tweaks: hide text wordmark + bigger logo === */
 .name{ display:none !important; }              /* remove "FrostLogic" text */
-.logo{ height:72px !important; }               /* bigger logo on desktop */
+.logo{ height:80px !important; }               /* bigger logo on desktop */
 .nav{ height:92px !important; }                /* give header a bit more room */
 @media (max-width:860px){
   .logo{ height:56px !important; }             /* big but sane on mobile */
