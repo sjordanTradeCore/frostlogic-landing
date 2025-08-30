@@ -1,0 +1,37 @@
+/* FrostLogic minimal landing (v3) */
+:root{
+  --bg:#070a12; --panel:#0c1220; --ink:#e7eef8; --muted:#9fb0c9; --accent:#21b0ff; --line:#1a2333;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.site-header{position:sticky;top:0;backdrop-filter:saturate(160%) blur(6px);background:rgba(7,10,18,.55);border-bottom:1px solid var(--line);z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{height:36px;width:auto;display:block;filter:drop-shadow(0 0 10px rgba(33,176,255,.35))}
+.name{font-weight:800;letter-spacing:.3px}
+.badge{font-size:12px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+.hero{padding:76px 0 40px;border-bottom:1px solid var(--line);background:radial-gradient(1100px 500px at 70% -10%, rgba(33,176,255,.12), transparent)}
+.hero-inner h1{font-size:36px;line-height:1.2;margin:0 0 8px}
+.hero-inner .sub{color:var(--muted);margin:0 0 14px}
+.punch{list-style:disc;margin:0 0 18px 20px;color:var(--ink)}
+.btn{display:inline-block;background:var(--accent);color:#001525;padding:12px 18px;border-radius:12px;font-weight:800;text-decoration:none;border:1px solid var(--accent)}
+.btn:hover{filter:brightness(1.05)}
+.btn-ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.btn-light{background:#e8f7ff;border-color:#e8f7ff;color:#00334a}
+.cta a{margin-right:10px}
+.stamp{margin-top:14px;color:var(--muted);font-size:13px}
+.section{padding:56px 0;border-bottom:1px solid var(--line)}
+.section.alt{background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card h3{margin-top:0}
+.cta-strip{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0}
+.cta-inner{display:flex;align-items:center;justify-content:space-between}
+.footer{padding:18px 0}
+.foot{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:14px}
+@media (max-width:860px){
+  .grid-3{grid-template-columns:1fr}
+  .cta-inner{flex-direction:column;gap:12px;text-align:center}
+  .hero-inner h1{font-size:28px}
+}
