@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FrostLogic — AI Compliance & Workforce OS</title>
   <meta name="description" content="Patent‑pending compliance infrastructure for enterprise retail. Immutable audit packets, ERP integration, and AI technician workflows delivering measurable annual efficiency gains.">
+  <meta property="og:title" content="FrostLogic — AI Compliance & Workforce OS">
+  <meta property="og:description" content="Immutable audit packets, ERP‑native integration, and AI technician workflows for enterprise retail.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://getfrostlogic.com/">
+  <meta property="og:image" content="https://getfrostlogic.com/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FrostLogic — AI Compliance & Workforce OS">
+  <meta name="twitter:description" content="Immutable audit packets, ERP‑native integration, and AI technician workflows for enterprise retail.">
+  <meta name="twitter:image" content="https://getfrostlogic.com/assets/og-image.png">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -19,7 +28,7 @@
         <a href="#problem">Problem</a>
         <a href="#solution">Solution</a>
         <a href="#patents">Patents</a>
-        <a href="mailto:sjordan@tradecoretechnologies.com?subject=FrostLogic%20Pilot%20Inquiry" class="btn btn-outline">Contact</a>
+        <a href="#contact" class="btn btn-outline">Contact</a>
         <span class="badge">Patent Pending</span>
       </nav>
     </div>
@@ -81,46 +90,40 @@
     <div class="container">
       <h2>Patent Portfolio (6 Pending)</h2>
       <ul class="patents">
-        <li>
-          <strong>FrostLogic — Compliance Management Platform for Refrigeration Systems</strong><br>
-          US App. No. <code>19/308,230</code> · Utility · Filed Aug 23, 2025
-        </li>
-        <li>
-          <strong>FrostDynamics — System and Method for ERP Integration and Compliance Data Synchronization</strong><br>
-          US App. No. <code>19/308,438</code> · Utility · Filed Aug 25, 2025
-        </li>
-        <li>
-          <strong>FrostLogic — AI‑Driven Field Service Management Platform</strong><br>
-          US Provisional App. No. <code>63/860,248</code> · Filed Aug 8, 2025
-        </li>
-        <li>
-          <strong>Real‑Time AI Field Technician Assistant with Wearable Integration and Adaptive Manager‑Controlled Profiles</strong><br>
-          US Provisional App. No. <code>63/860,636</code> · Filed Aug 8, 2025
-        </li>
-        <li>
-          <strong>Cryptographic Store Stamp, Dispatch Scoring, and Inventory Reorder Systems for Field Service Operations</strong><br>
-          US Provisional App. No. <code>63/862,392</code> · Filed Aug 12, 2025
-        </li>
-        <li>
-          <strong>Adaptive Apprenticeship Training Feedback System</strong><br>
-          US Provisional App. No. <code>63/862,404</code> · Filed Aug 12, 2025
-        </li>
+        <li><strong>FrostLogic — Compliance Management Platform for Refrigeration Systems</strong><br>US App. No. <code>19/308,230</code> · Utility · Filed Aug 23, 2025</li>
+        <li><strong>FrostDynamics — System and Method for ERP Integration and Compliance Data Synchronization</strong><br>US App. No. <code>19/308,438</code> · Utility · Filed Aug 25, 2025</li>
+        <li><strong>FrostLogic — AI‑Driven Field Service Management Platform</strong><br>US Provisional App. No. <code>63/860,248</code> · Filed Aug 8, 2025</li>
+        <li><strong>Real‑Time AI Field Technician Assistant with Wearable Integration and Adaptive Manager‑Controlled Profiles</strong><br>US Provisional App. No. <code>63/860,636</code> · Filed Aug 8, 2025</li>
+        <li><strong>Cryptographic Store Stamp, Dispatch Scoring, and Inventory Reorder Systems for Field Service Operations</strong><br>US Provisional App. No. <code>63/862,392</code> · Filed Aug 12, 2025</li>
+        <li><strong>Adaptive Apprenticeship Training Feedback System</strong><br>US Provisional App. No. <code>63/862,404</code> · Filed Aug 12, 2025</li>
       </ul>
-      <p style="color:#9fb0c9;margin-top:10px;font-size:14px">
-        Status: <em>All applications pending.</em> Utility and provisional filings shown for transparency.
-      </p>
+      <p style="color:#9fb0c9;margin-top:10px;font-size:14px">Status: <em>All applications pending.</em> Utility and provisional filings shown for transparency.</p>
     </div>
   </section>
 
-  <section id="contact" class="cta-strip">
-    <div class="container cta-inner">
-      <div>
-        <h3>Ready to de‑risk refrigerant compliance?</h3>
-        <p>Ask about a paid, 60‑day pilot for enterprise retail.</p>
-      </div>
-      <div>
-        <a class="btn btn-light" href="mailto:sjordan@tradecoretechnologies.com?subject=FrostLogic%20Pilot%20Inquiry">Contact FrostLogic</a>
-      </div>
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="muted">Prefer email? <a href="mailto:sjordan@tradecoretechnologies.com?subject=FrostLogic%20Pilot%20Inquiry">sjordan@tradecoretechnologies.com</a></p>
+      <form id="lead-form" class="lead-form" method="post" novalidate>
+        <div class="row">
+          <label>Full Name*<input type="text" name="name" required></label>
+          <label>Company*<input type="text" name="company" required></label>
+        </div>
+        <div class="row">
+          <label>Email*<input type="email" name="email" required></label>
+          <label>Phone<input type="tel" name="phone"></label>
+        </div>
+        <div class="row">
+          <label># of Stores<input type="number" min="1" step="1" name="stores"></label>
+          <label>Message<textarea name="message" rows="3" placeholder="Interested in a 60‑day pilot…"></textarea></label>
+        </div>
+        <div class="row actions">
+          <button class="btn" type="submit">Send</button>
+          <span id="lead-status" class="status"></span>
+        </div>
+      </form>
+      <p class="tiny muted">We’ll never share your info. By submitting, you agree to be contacted about a pilot.</p>
     </div>
   </section>
   </main>
@@ -146,6 +149,31 @@
         document.querySelector(href).scrollIntoView({behavior:'smooth', block:'start'});
       }
     });
+  });
+  const LEAD_ENDPOINT = window.LEAD_ENDPOINT || "";
+  const form = document.getElementById('lead-form');
+  const statusEl = document.getElementById('lead-status');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form).entries());
+    if(!data.name || !data.company || !data.email){
+      statusEl.textContent = "Please fill required fields";
+      statusEl.className = "status error";
+      return;
+    }
+    if(!LEAD_ENDPOINT){
+      const body = encodeURIComponent(`Name: ${data.name}\nCompany: ${data.company}\nEmail: ${data.email}\nPhone: ${data.phone||""}\nStores: ${data.stores||""}\n\nMessage:\n${data.message||""}`);
+      window.location.href = `mailto:sjordan@tradecoretechnologies.com?subject=FrostLogic%20Pilot%20Inquiry&body=${body}`;
+      return;
+    }
+    statusEl.textContent = "Sending…"; statusEl.className = "status sending";
+    try{
+      const res = await fetch(LEAD_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)});
+      if(!res.ok) throw new Error("Bad response");
+      form.reset(); statusEl.textContent = "Sent! We’ll reply shortly."; statusEl.className = "status ok";
+    }catch(err){
+      statusEl.textContent = "Couldn’t send. Try email instead."; statusEl.className = "status error";
+    }
   });
 </script>
 </body>

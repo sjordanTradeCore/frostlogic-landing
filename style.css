@@ -1,23 +1,16 @@
-/* FrostLogic landing v5 — bigger logo, no wordmark, nav contact mailto */
-:root{
-  --bg:#070a12; --panel:#0c1220; --ink:#e7eef8; --muted:#9fb0c9; --accent:#21b0ff; --line:#1a2333;
-}
+:root{ --bg:#070a12; --panel:#0c1220; --ink:#e7eef8; --muted:#9fb0c9; --accent:#21b0ff; --line:#1a2333; }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
 html{scroll-behavior:smooth}
 .container{max-width:1100px;margin:0 auto;padding:0 20px}
-/* Header */
 .site-header{position:sticky;top:0;backdrop-filter:saturate(160%) blur(6px);background:rgba(7,10,18,.55);border-bottom:1px solid var(--line);z-index:20}
 .nav{display:flex;align-items:center;justify-content:space-between;height:98px}
 .brand{display:flex;gap:14px;align-items:center;text-decoration:none;color:var(--ink)}
-/* High-specificity logo size (overrides any old rules) */
 .site-header .nav .brand > img.logo{height:88px;width:auto;display:block;filter:drop-shadow(0 0 14px rgba(33,176,255,.45))}
 .topnav{display:flex;align-items:center;gap:18px}
 .topnav a{color:var(--muted);text-decoration:none;font-weight:600}
 .topnav a:hover{color:var(--ink)}
 .badge{font-size:12px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
-
-/* Hero */
 .hero{padding:92px 0 48px;border-bottom:1px solid var(--line);background:radial-gradient(1100px 500px at 70% -10%, rgba(33,176,255,.12), transparent)}
 .hero-inner h1{font-size:40px;line-height:1.2;margin:0 0 10px}
 .hero-inner .sub{color:var(--muted);margin:0 0 16px}
@@ -25,12 +18,9 @@ html{scroll-behavior:smooth}
 .btn{display:inline-block;background:var(--accent);color:#001525;padding:12px 18px;border-radius:12px;font-weight:800;text-decoration:none;border:1px solid var(--accent)}
 .btn:hover{filter:brightness(1.05)}
 .btn-ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
-.btn-light{background:#e8f7ff;border-color:#e8f7ff;color:#00334a}
 .btn-outline{background:transparent;border:1px solid var(--line);color:var(--ink)}
 .cta a{margin-right:10px}
 .stamp{margin-top:14px;color:var(--muted);font-size:13px}
-
-/* Sections */
 .section{padding:60px 0;border-bottom:1px solid var(--line)}
 .section.alt{background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));}
 .grid-2{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}
@@ -38,23 +28,24 @@ html{scroll-behavior:smooth}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
 .card h3{margin-top:0}
 .patents{margin:0 0 0 20px}
-
-/* CTA strip + Footer */
-.cta-strip{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0}
-.cta-inner{display:flex;align-items:center;justify-content:space-between}
+.lead-form{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:10px}
+.lead-form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:12px}
+.lead-form label{display:flex;flex-direction:column;font-weight:600;color:var(--muted);font-size:14px}
+.lead-form input,.lead-form textarea{margin-top:6px;background:#0a0f1c;border:1px solid var(--line);border-radius:10px;padding:10px;color:var(--ink)}
+.lead-form .actions{align-items:center}
+.status{font-size:14px;margin-left:10px;color:var(--muted)}
+.status.ok{color:#5ef3a1}
+.status.error{color:#ff8585}
+.status.sending{color:#ffd27a}
 .footer{padding:18px 0}
 .foot{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:14px}
-
-/* Responsive */
+.muted{color:var(--muted)}
+.tiny{font-size:12px}
 @media (max-width:860px){
   .nav{height:86px}
   .site-header .nav .brand > img.logo{height:68px}
   .grid-2,.grid-3{grid-template-columns:1fr}
-  .cta-inner{flex-direction:column;gap:12px;text-align:center}
+  .lead-form .row{grid-template-columns:1fr}
   .hero-inner h1{font-size:30px}
   .topnav{gap:12px}
 }
-
-/* Patents styling */
-.patents li{margin:10px 0 14px;line-height:1.35}
-.patents code{background:#0c1220;border:1px solid var(--line);border-radius:6px;padding:2px 6px}
