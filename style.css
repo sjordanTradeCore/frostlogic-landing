@@ -52,6 +52,7 @@ html{scroll-behavior:smooth}
   .hero-inner h1{font-size:30px}
   .logo{height:44px}
   .topnav{gap:12px}
+
   /* === Brand tweaks: hide text wordmark + bigger logo === */
 .name{ display:none !important; }      /* remove "FrostLogic" text */
 .logo{ height:72px !important; }       /* bigger logo on desktop */
@@ -59,14 +60,21 @@ html{scroll-behavior:smooth}
 @media (max-width:860px){
   .logo{ height:56px !important; }
   .nav{ height:80px !important; }
-}
 
-}
-/* === Brand tweaks: hide text wordmark + bigger logo === */
+  /* === Brand tweaks: hide text wordmark + bigger logo === */
 .name{ display:none !important; }      /* remove "FrostLogic" text */
 .logo{ height:72px !important; }       /* bigger logo on desktop */
 .nav{ height:92px !important; }        /* more header space */
 @media (max-width:860px){
   .logo{ height:56px !important; }
   .nav{ height:80px !important; }
-}
+
+  /* === Brand tweaks: hide text wordmark + bigger logo === */
+.name{ display:none !important; }              /* remove "FrostLogic" text */
+.logo{ height:72px !important; }               /* bigger logo on desktop */
+.nav{ height:92px !important; }                /* give header a bit more room */
+@media (max-width:860px){
+  .logo{ height:56px !important; }             /* big but sane on mobile */
+  .nav{ height:80px !important; }
+
+
